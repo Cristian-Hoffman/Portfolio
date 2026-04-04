@@ -11,6 +11,12 @@ gallery:
   - type: "video"
     file: "/assets/images/projects/aerobalancin/aerobalancin1.mp4"
     description: "System response — stabilization at 165°"
+  - type: "image"
+    file: "/assets/images/projects/aerobalancin/aerobalancin3.jpg"
+    description: "PID step response"
+  - type: "image"
+    file: "/assets/images/projects/aerobalancin/aerobalancin4.jpg"
+    description: "PID + lead compensator response"
 
 schematics:
   - file: "/assets/images/projects/aerobalancin/aerobalancin3.jpg"
@@ -24,7 +30,7 @@ code_files:
     language: "cpp"
     download_url: "https://github.com/Cristian-Hoffman/ElectricalEngineering/blob/main/assets/code/aerobalancin.ino"
     content: ""
-    
+
 ---
 
 ## Overview
