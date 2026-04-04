@@ -20,9 +20,9 @@ gallery:
 
 code_files:
   - name: "Aeropendulum PID Controller"
-    file: "Aerobalancin.ino"
+    file: "aerobalancin.ino"
     language: "cpp"
-    download_url: "/assets/code/Aerobalancin.ino"
+    download_url: "https://github.com/Cristian-Hoffman/ElectricalEngineering/blob/main/assets/code/aerobalancin.ino"
     content: ""
 ---
 
