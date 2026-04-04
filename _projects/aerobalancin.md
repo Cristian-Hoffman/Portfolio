@@ -5,7 +5,7 @@ description: "Implementation of a PID controller with lead compensator to stabil
 date: 2024-01-01
 categories: [Control Systems, Arduino, Embedded]
 featured: true
-featured_image: "/assets/images/projects/aerobalancin/aerobalancin2.jpeg"
+featured_image: "/assets/images/projects/aerobalancin/aerobalancin2.jpg"
 
 gallery:
   - type: "video"
@@ -13,9 +13,9 @@ gallery:
     description: "System response — stabilization at 165°"
 
 schematics:
-  - file: "/ElectricalEngineering/assets/images/projects/aerobalancin/aerobalancin3.jpeg"
+  - file: "/ElectricalEngineering/assets/images/projects/aerobalancin/aerobalancin3.jpg"
     description: "PID step response"
-  - file: "/ElectricalEngineering/assets/images/projects/aerobalancin/aerobalancin4.jpeg"
+  - file: "/ElectricalEngineering/assets/images/projects/aerobalancin/aerobalancin4.jpg"
     description: "PID + lead compensator response"
 
 code_files:
