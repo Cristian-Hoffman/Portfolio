@@ -17,20 +17,6 @@ gallery:
   - type: "image"
     file: "/assets/images/projects/aerobalancin/aerobalancin4.jpg"
     description: "PID + lead compensator response"
-
-schematics:
-  - file: "/assets/images/projects/aerobalancin/aerobalancin3.jpg"
-    description: "PID step response"
-  - file: "/assets/images/projects/aerobalancin/aerobalancin4.jpg"
-    description: "PID + lead compensator response"
-
-code_files:
-  - name: "Aeropendulum PID Controller"
-    file: "aerobalancin.ino"
-    language: "cpp"
-    download_url: "https://github.com/Cristian-Hoffman/ElectricalEngineering/blob/main/assets/code/aerobalancin.ino"
-    content: ""
-
 ---
 
 ## Overview
