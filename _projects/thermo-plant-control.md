@@ -16,10 +16,20 @@ schematics:
     description: "Complete technical report and circuit schematics for the Greenhouse Thermal Plant Control project."
 
 gallery:
-  - file: "/assets/images/projects/thermo-plant/featured.jpg"
-    description: "Project Cover: Greenhouse Temperature Control Study."
+  - file: "/assets/images/projects/thermo-plant/schematic.png"
+    description: "Circuit Schematic: Electronic setup for the 2N2222 transistor thermal plant."
+  - file: "/assets/images/projects/thermo-plant/blockDiagram.png"
+    description: "System Block Diagram: Control loop architecture for temperature regulation."
   - file: "/assets/images/projects/thermo-plant/assembly.jpg"
     description: "Hardware Assembly: Arduino and sensor integration for thermal characterization."
+  - file: "/assets/images/projects/thermo-plant/plantIdentification.png"
+    description: "Plant Identification: Response to step signals for mathematical modeling."
+  - file: "/assets/images/projects/thermo-plant/controlPoleLocation.png"
+    description: "Root Locus: Pole location design for the PI controller."
+  - file: "/assets/images/projects/thermo-plant/controlresponse.png"
+    description: "Control Response: Temperature settlement following PI implementation."
+  - file: "/assets/images/projects/thermo-plant/perturbationResponse.png"
+    description: "Robustness Test: System response to external thermal perturbations."
 
 ---
 
