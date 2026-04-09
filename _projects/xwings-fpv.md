@@ -10,6 +10,7 @@ institution: "Universidad Nacional de Colombia"
 organization: ["IEEE UN", "CEIMTUN-RAS", "AESS UN"]
 founded: "April 2019"
 featured: true
+permalink: /projects/xwings-fpv/
 featured_image: "/assets/images/projects/xwings-fpv/ytVideo.gif"
 
 demo_url: "https://xwings-fpv.github.io/webpage/"
@@ -19,10 +20,14 @@ email: "xwingsfpv@gmail.com"
 video_url: "https://www.youtube.com/watch?v=zehUei7lUtA"
 
 gallery:
+  - file: "/assets/images/projects/xwings-fpv/Ronda 2 Alejandro.gif"
+    description: "FPV Racing - Alejandro competing in Round 2"
   - file: "/assets/images/projects/xwings-fpv/Inquebrantables.mp4"
     description: "Inquebrantables - XWings FPV Team Documentary"
   - file: "/assets/images/projects/xwings-fpv/allteam.jpg"
     description: "XWings FPV Team Photo"
+  - file: "/assets/images/projects/xwings-fpv/fpvPilot.png"
+    description: "FPV Pilot in action with goggles"
   - file: "/assets/images/projects/xwings-fpv/dron.jpg"
     description: "Racing drone build"
   - file: "/assets/images/projects/xwings-fpv/tvunal.jpg"
@@ -31,7 +36,14 @@ gallery:
     description: "Competition day - January 2020"
   - file: "/assets/images/projects/xwings-fpv/IMG_20240802_172928367.jpg"
     description: "Team event - August 2024"
-
+  - file: "/assets/images/projects/xwings-fpv/PXL_20250518_030525061.jpg"
+    description: "Competition - May 2025"
+  - file: "/assets/images/projects/xwings-fpv/PXL_20250530_211215191.jpg"
+    description: "Racing event - May 2025"
+  - file: "/assets/images/projects/xwings-fpv/PXL_20250603_215942173.jpg"
+    description: "Competition - June 2025"
+  - file: "/assets/images/projects/xwings-fpv/PXL_20250606_180313233.jpg"
+    description: "Team gathering - June 2025"
 
 ---
 
@@ -45,7 +57,7 @@ I joined the team in early 2020, and since 2023 I've served as the chair, leadin
 
 ### Mission
 
-Our mission is to:
+Experience the ultimate rush of adrenaline and speed as we race through the skies with our FPV racing drones. Our mission is to:
 
 - **Compete**: Participate in national and international drone racing competitions
 - **Innovate**: Develop and optimize custom racing drones
@@ -66,6 +78,7 @@ Our mission is to:
 - **Precision**: Navigate through gates and around obstacles with millimeter accuracy
 - **Immersion**: Pilots experience flight as if they were in the cockpit
 - **Technology**: Custom-built drones with cutting-edge electronics and aerodynamics
+
 ---
 
 ## Team Structure
@@ -202,4 +215,3 @@ Follow us for:
 ## Keywords
 
 `FPV Racing` `Drone Racing` `Quadcopter` `First Person View` `Universidad Nacional de Colombia` `UNAL` `IEEE` `RAS` `AESS` `CEIMTUN` `Competition` `Robotics` `Autonomous Systems` `Betaflight` `Racing Drones` `Pilot Training` `Mechatronics` `Aerospace` `Colombia` `Bogotá`
-
