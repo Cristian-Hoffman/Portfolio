@@ -17,6 +17,8 @@ website_url: "https://huggingface.co/datasets/xwingspruebas/prueba"
 gallery:
   - file: "/assets/images/projects/drone-dataset/viz.png"
     description: "Visualization of the drone dataset on LeRobot (Hugging Face) showing motor outputs and rotation rates."
+  - file: "/assets/images/projects/drone-dataset/XWings.mp4"
+    description: "Initial test flights — slalom maneuvers between obstacles for dataset collection."
 
 ---
 
