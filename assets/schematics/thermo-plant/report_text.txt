@@ -1,0 +1,262 @@
+CONTROL DEINVERNADERO 
+PROYECTO
+Ana Orozco Reyes
+Sebastian Grillo Gonzalez
+Cristian Hoffman Martin Mondragon
+Juan Jose Cifuentes Rojas
+CONTENIDO
+TABLA DE
+Planteamiento del problema
+Entendimiento e identificación de
+la planta
+Definición de la planta
+Diseño del controlador
+Implementación del controlador
+PLANTEAMIENTO
+Mantener la temperatura de un transistor 2N2222 que simula un invernadero
+ubicado en un ambiente de clima cálido, diseñando el control de temperatura
+para el cuidado de cultivos de melón, soya y tomate.
+OBJETIVO
+Fig 1. Esquematico del circuito
+PLANTEAMIENTO
+Investigación DiseñoAnálisis
+Melón: 20°C - 30 °C [1]
+Soya: 20°C - 30 °C [2]
+Tomate: 18°C - 29 °C [3]
+Mp < 35,7 % = 38°C
+ts < 10min
+Rango de operación:
+28°C ±  3°C
+La temperatura del piso cálido en Colombia, en el cual
+estará la planta, oscila entre 22°C a 30°C [4].
+PLANTEAMIENTO
+Planta: Circuitotransistor2N2222
+Control:Arduino
+Sensor:CircuitoSensortemperaturaDS18B20
+Dispositivo Valor
+mínimo
+Valor
+máximo
+Sensor
+DS18B20
+3 V 5.5 V
+-55° C 125° C
+Transistor
+2N2222
+- 150°C
+- 800 mA
+- 40 V
+Arduino
+(PWM) 0 V 5 V
+SUB-SISTEMAS
+Y(s)R(s)
+RESTRICCIONES
+Fig 2. Diagrama de bloques del sistema
+PLANTEAMIENTO
+PlantaControl
+Sensor
+Y(s)R(s) U(s)e(s)
+GPIO
+Señal Valor mínimo Valor
+máximo
+R (s)
+(Código) 25 °C 31 °C
+e (s)
+(Código) -5 °C 9 °C
+GPIO
+(Física) 22 °C 30 °C
+Y (s)
+(Código) 25 °C  31 °C
+U (s)
+(Física) 0 V  5 V
+SEÑALES
+Fig 3. Diagrama de bloques ubicando señales.
+PLANTEAMIENTO
+HARDWARE
+Sensor de temperatura digital
+DS18B20
+Transistor NPN 2N2222
+Trimmer 10K Ω 
+Resistencias 1K Ω  y 4.7K Ω 
+Tarjeta de desarrollo Arduino UNO
+SOFTWARE
+Arduino IDE 
+MATLAB y Simulink
+MONTAJE
+Fig 4. Montaje del circuito
+Voltaje del Arduino: 1V = 20%*5V
+Temperatura deseada: 28 °C
+Perturbación:  Disminución de la
+temperatura ambiente a causa del exterior
+del invernadero y el encendido de
+aspersores.
+ENTENDIMIENTO DE
+LA PLANTA 
+ENTENDIMIENTO DE LA PLANTA 
+EL CÓDIGO
+Fig 5. Parámetros de modificación, lectura y recolección de datos.
+El modelo matemático que describe el
+sistema térmico 
+FUNCIÓN DE TRASFERENCIA
+MATEMÁTICA
+Donde :
+θ : Cambio de temperatura 
+qi, qout: Flujos térmicos 
+R: Resistencia térmica
+C: Capacitancia térmica
+V:voltaje
+I:corriente
+R:resistencia
+( 3 ) 
+ Analogías presentes: cambio de temperatura -> tensión flujo térmico -> Ley de Ohm 
+FUNCIÓN DE TRASFERENCIA
+Fig 6. Esquema térmico 
+FUNCIÓN DE TRASFERENCIA
+Fig 6. Esquema térmico 
+Se observa una función de transferencia lineal, dada su forma
+caracteristica de una ecuación diferencial de segundo orden, se añade
+que no contiene términos no lineales como por ejemplo trigonométricas. 
+Por otro lado, por criterio de Routh, se llega a la conclucion de que R1,
+R2, C1 y C2 tienen que ser mayores a cero para que el sistema sea
+estable. 
+LINEALIDAD, ESTABILIDAD Y ORDEN
+Inicialmente se busco llegar al P.op mediante un trimmer en el circuito
+del transistor, esto con el objetivo de llegar a los parámetros ingresados
+en el código, una referencia de 28°C y que este fuera estable con un
+PWM de 20%. Se obtuvo que el tiempo de asentamiento de la planta
+fue de aproximadamente 6 minutos.
+PROCESO DE CALIBRACIÓN
+DEFINICIÓN DE LA PLANTA
+Se diseñó una señal de identificación
+de cuatro pasos, con variaciones de ± 5
+% y 10 %, y una duración de diez
+minutos cada uno, con el fin de permitir
+el asentamiento de la temperatura y
+obtener una mejor aproximación de la
+función de transferencia de la planta.
+SEÑAL DE IDENTIFICACIÓN
+Fig 7. Señal de caracterización. 
+DEFINICIÓN DE LA PLANTA
+FUNCIÓN DE TRANSFERENCIA
+Fig 8. Respuesta al paso de la FT de la planta. 
+DISEÑO DEL CONTROLADOR
+Con el fin de lograr los
+planteamientos iniciales de
+sobrepico (Mp), tiempo de
+asentamiento (ts), error de
+posición (er) idealmente de 0 y
+alto rechazo de perturbaciones;
+se decidió diseñar un
+controlador PI.
+Kp constante y Ki variable
+Ki constante y Kp variable
+DISEÑO DEL CONTROLADOR
+ROOT LOCUS DE KP CONSTANTE Y KI VARIABLE
+Fig 10. Diagrama de Root Locus.
+DISEÑO DEL CONTROLADOR
+LÍMITES DE LAS GANANCIAS DE KI
+Para estabilidad: 
+Ki > 0
+Para Mp < 35.7%:
+0 < Ki < 0.504
+Para ts < 10 minutos:
+0.0822 < ki < 0.836
+Intervalo final para Ki:
+0.0822 < ki < 0.504
+DISEÑO DEL CONTROLADOR
+SIMULACIÓN DEL CONTROLADOR
+Finalmente, se escogió Ki = 0.25, teniendo en cuenta un punto medio del rango hallado
+anteriormente. 
+Observando la función de
+transferencia de lazo cerrado del
+sistema completo, se identifica que
+los coeficientes independientes del
+numerador y denominador son
+iguales, demostrando error de
+posición igual a 0.
+Fig 11. Respuesta al paso implementando el controlador PI.
+DISEÑO DEL CONTROLADOR
+SIMULACIÓN DEL CONTROLADOR
+Al perturbar el sistema con la temperatura máxima y mínima (22°C - 30°C) se
+observa que la señal de control no excede los limites (-20% - 80%), concluyendo en
+que el sistema no se satura con las perturbaciones diseñadas.
+Fig 12. Respuesta del sistema ante pertubaciones (Temperatura vs tiempo). Fig 13. Respuesta del sistema ante pertubaciones (%PWM vs tiempo). 
+IMPLEMENTACIÓN
+DISCRETIZACIÓN Y ECUACIONES DE DIFERENCIAS
+Para discretizar el controlador se usó el método de Tustin, donde: 
+Se obtuvo:
+Finalmente, se define la variable Uc  dentro del código, utilizando la
+ecuación previamente establecida. Además, de reemplazarse los valores
+de Kp=10 y Ki =0,25.
+Reemplazando en:
+IMPLEMENTACIÓN 
+EXPERIMENTO DE ROBUSTEZ
+Se incorporó una capa de papel entre el transistor y el sensor para modificar la resistencia
+térmica. Además, se encerró el circuito en una caja pequeña para alterar la capacitancia térmica
+y observar su efecto en la transferencia de calor entre el transistor y el sensor.
+IMPLEMENTACIÓN 
+SIN PAPEL CON PAPEL
+Sobrepico de 4.46% Sobrepico de 13.1%
+Sin saturación Con saturación
+Ts = 88 segundos Ts =  315 segundos
+RESULTADOS DE ROBUSTEZ
+Se observa que el sistema se comporta de manera
+diferente al modificar los parámetros térmicos del
+circuito. Los cambios más importantes fueron los
+siguientes:
+ Se concluye que el sistema presenta baja robustez frente
+a variaciones en los parámetros térmicos de la planta,
+dado que su comportamiento cambia significativamente
+ante dichos cambios.
+IMPLEMENTACIÓN 
+EXPERIMENTO DE CAMBIO DE REFERENCIA
+Para este caso, se cambió la referencia del sistema a 25 °C, con el fin de
+observar el comportamiento del controlador ante una modificación de los
+parámetros de calibración iniciales.
+EXPERIMENTO DE DESEMPEÑO
+Con ayuda de un ventilador que expulsaba aire a 17 °C, se enfrió el sistema con
+el fin de evaluar la respuesta dinámica de la planta ante perturbaciones térmicas
+externas.
+IMPLEMENTACIÓN 
+RESULTADOS
+EXPERIMENTO DE DESEMPEÑO
+Al introducir la perturbación se observaron dos momentos clave:
+1.Al encender el ventilador, se observó una disminución en la
+temperatura registrada por el sensor. Simultáneamente, el
+valor del PWM aumentó hasta aproximadamente el 70%. En
+un tiempo cercano a los 110 segundos, el sistema logró
+esentar nuevamente en la referencia.
+2.Al apagar el ventilador, la temperatura de la planta aumentó
+debido a la reducción del flujo de aire, y el PWM disminuyó a
+aproximadamente el 30%. De igual manera, el sistema se
+asentó en la referencia en aproximadamente 110 segundos.
+Se puede concluir que el sistema presenta un alto desempeño, ya
+que, a pesar de los cambios significativos en la temperatura
+provocados por las perturbaciones, fue capaz de retornar a la
+referencia en un tiempo relativamente corto.
+CONCLUSIONES
+La elección del punto de operación, junto con un PWM del 20%, juega un papel importante tanto en la caracterización como en el
+diseño del controlador y su posterior prueba. En nuestro caso específico, un PWM bajo permitió que el sistema respondiera a las
+perturbaciones sin llegar a saturarse.
+El uso de un tren de pulsos resultó ser un buen método para la caracterización de la planta, aunque requiere tiempo y varios
+intentos. La duración de cada paso, así como su amplitud, son fundamentales para obtener una buena función de transferencia.
+Para el diseño del control PI se utilizó el método de análisis Root Locus. Al incorporar los criterios de diseño, tanto en las
+simulaciones como en la práctica se obtuvieron los resultados esperados, aunque con algunas diferencias entre lo simulado y lo
+observado en la realidad.
+La implementación de herramientas como MATLAB y Simulink fue indispensable para los planteamientos matemáticos y la
+visualización del comportamiento esperado del sistema. Aunque no se logró replicar exactamente los resultados de la
+simulación, en la práctica se obtuvieron resultados incluso mejores de lo esperado.
+Las pruebas de desempeño y robustez evidenciaron un sistema con baja robustez, pero con buen desempeño. A pesar de esa
+baja robustez, el controlador logró mantener el sistema dentro de los parámetros establecidos inicialmente.
+REFERENCIAS
+[1] BASTIDA CAÑADA, O. A. (2025, 24 ENERO). CLIMA, SUELO Y AGUA PARA LA PRODUCCIÓN DEL CULTIVO DEL MELÓN.
+BLOG AGRICULTURA. HTTPS://BLOGAGRICULTURA.COM/CLIMA-SUELO-MELON/
+[2] BASTIDA CAÑADA, O. A. (2025A, ENERO 14). CLIMA, SUELO Y AGUA PARA LA PRODUCCIÓN DEL CULTIVO DE LA SOYA.
+BLOG AGRICULTURA. HTTPS://BLOGAGRICULTURA.COM/CLIMA-SUELO-SOYA/
+[3] MEIR, R. (2024, 16 OCTUBRE). ¿ CUÁLES SON LAS CONDICIONES IDEALES PARA LOS TOMATES DE INVERNADERO?
+DRYGAIR GREENHOUSE DEHUMIDIFIERS. HTTPS://DRYGAIR.COM/ES/BLOG-ES/CUALES-SON-LAS-CONDICIONES-
+IDEALES-PARA-LOS-TOMATES-DE-INVERNADERO/
+[4] ZONIFICACIÓN CLIMÁTICA APLICADA A LEVANTAMIENTO DE SUELOS | INSTITUTO GEOGRÁFICO AGUSTÍN CODAZZI. (S.
+F.). HTTPS://WWW.IGAC.GOV.CO/TRANSPARENCIA-Y-ACCESO-A-LA-INFORMACION-PUBLICA/INFORMACION-DE-LA-
+ENTIDAD/LISTADO-MAESTRO-DE-DOCUMENTOS/ZONIFICACION-CLIMATICA-APLICADA-LEVANTAMIENTO-DE-SUELOS
+ G R A C I A S ! ! ! !
