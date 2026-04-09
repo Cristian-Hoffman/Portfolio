@@ -3,7 +3,7 @@ layout: project
 title: "Liftoff Training Dashboard"
 subtitle: "Automating pilot performance tracking for XWings FPV"
 description: "A specialized dashboard designed to track and analyze pilot performance in the LiftOff drone simulator, optimizing training cycles and ensuring consistent progress."
-date: 2026-04-08
+date: 2026-04-07
 categories: [Drones, Data Visualization, Simulator, FPV]
 authors: ["Alejandro Ojeda Olarte"]
 institution: "Universidad Nacional de Colombia"

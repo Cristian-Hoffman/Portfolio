@@ -3,7 +3,7 @@ layout: project
 title: "Drone Pilot Commands Dataset"
 subtitle: "Understanding flight dynamics through human expert control"
 description: "A comprehensive dataset collected from a Nazgul drone to capture and analyze human pilot commands and rotation tendencies using Betaflight Blackbox."
-date: 2026-04-08
+date: 2026-04-07
 categories: [Drones, Machine Learning, Robotics, FPV]
 authors: ["Alejandro Ojeda Olarte"]
 institution: "Universidad Nacional de Colombia"

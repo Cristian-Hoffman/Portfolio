@@ -3,14 +3,13 @@ layout: project
 title: "XWings FPV - Drone Racing Team"
 subtitle: "Universidad Nacional de Colombia Drone Racing Team"
 description: "FPV drone racing team competing at national and international levels, representing UNAL through IEEE UN, CEIMTUN-RAS, and AESS UN"
-date: 2026-04-10
+date: 2026-03-03
 categories: [Drones, FPV Racing, Robotics, Competition, Teamwork]
 authors: ["Alejandro Ojeda Olarte", "Dylan Ortiz", "Camilo Acuña", "Juan Pablo Vallejo", "Johel Prada", "Jaime Yara", "Juan Jose Losada Perdomo", "Angel Avendaño", "Cristian Martin", "Juseph Useche", "Libardo Carreño", "Santiago Cadena", "David Santiago Sandoval"]
 institution: "Universidad Nacional de Colombia"
 organization: ["IEEE UN", "CEIMTUN-RAS", "AESS UN"]
 founded: "April 2019"
 featured: true
-permalink: /projects/xwings-fpv/
 featured_image: "/assets/images/projects/xwings-fpv/ytVideo.gif"
 
 demo_url: "https://xwings-fpv.github.io/webpage/"
@@ -26,8 +25,6 @@ gallery:
     description: "Inquebrantables - XWings FPV Team Documentary"
   - file: "/assets/images/projects/xwings-fpv/allteam.jpg"
     description: "XWings FPV Team Photo"
-  - file: "/assets/images/projects/xwings-fpv/fpvPilot.png"
-    description: "FPV Pilot in action with goggles"
   - file: "/assets/images/projects/xwings-fpv/dron.jpg"
     description: "Racing drone build"
   - file: "/assets/images/projects/xwings-fpv/tvunal.jpg"
