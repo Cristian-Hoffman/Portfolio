@@ -68,12 +68,9 @@ project_categories:
   - name: "Arduino"
     slug: "arduino"
     description: "Arduino-based projects and prototypes"
-  - name: "3D Printing"
-    slug: "3d-printing"
+  - name: "Control Systems"
+    slug: "Control Systems"
     description: "Custom 3D printed components and designs"
-  - name: "IoT"
-    slug: "iot"
-    description: "Internet of Things devices and applications"
 
 # 3D Model settings
 models:
