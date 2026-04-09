@@ -3,7 +3,7 @@ layout: project
 title: "Greenhouse Thermal Plant Control"
 subtitle: "Electronic Temperature Control System for Crop Simulation"
 description: "A precision temperature control system using a 2N2222 transistor as a heat source and a DS18B20 sensor to simulate greenhouse climate conditions for agriculture."
-date: 2026-04-08
+date: 2023-01-01
 categories: [Control Systems, Arduino, Electronics, Thermal Analysis]
 authors: ["Cristian Hoffman Martin Mondragon", "Ana Orozco Reyes", "Sebastian Grillo Gonzalez", "Juan Jose Cifuentes Rojas"]
 institution: "Universidad Nacional de Colombia"

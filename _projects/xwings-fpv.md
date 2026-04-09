@@ -3,7 +3,7 @@ layout: project
 title: "XWings FPV - Drone Racing Team"
 subtitle: "Universidad Nacional de Colombia Drone Racing Team"
 description: "FPV drone racing team competing at national and international levels, representing UNAL through IEEE UN, CEIMTUN-RAS, and AESS UN"
-date: 2025-01-01
+date: 2026-04-10
 categories: [Drones, FPV Racing, Robotics, Competition, Teamwork]
 authors: ["Alejandro Ojeda Olarte", "Dylan Ortiz", "Camilo Acuña", "Juan Pablo Vallejo", "Johel Prada", "Jaime Yara", "Juan Jose Losada Perdomo", "Angel Avendaño", "Cristian Martin", "Juseph Useche", "Libardo Carreño", "Santiago Cadena", "David Santiago Sandoval"]
 institution: "Universidad Nacional de Colombia"
