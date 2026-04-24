@@ -43,7 +43,7 @@ permalink: /about/
             <div class="perfect-for-grid">
                 <div class="perfect-for-item">
                     <h4>B.Sc. Electrical Engineering</h4>
-                    <p>Universidad Nacional de Colombia<br><em>In progress — expected graduation 2025</em></p>
+                    <p>Universidad Nacional de Colombia<br><em>In progress — expected graduation 2027</em></p>
                 </div>
                 <div class="perfect-for-item">
                     <h4>Technologist in Industrial Electricity</h4>
